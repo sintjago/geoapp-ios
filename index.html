@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="styles/lungo.icon.css">
     <link rel="stylesheet" href="styles/lungo.icon.brand.css">
     <link rel="stylesheet" href="styles/claro.css">
-    <script src="phonegap.js"></script>
-    <script src="barcodescanner.js"></script>
-    <script src="childbrowser.js"></script>
-    <script src="lib/quo.js"></script>
-    <script src="lib/lungo.js"></script>
-    <script src="lib/parse-1.2.1.min.js"></script>
-    <script src="app.js"></script>
   </head>
-  <body class="app" onload="onLoad()">
+  <body class="app" onload="">
 
     <section id="main" data-transition="">
       <header data-title="Búsqueda">
@@ -38,8 +31,29 @@
       <article id="favorites">
         Favoritos...
       </article>
-      <article id="recommended">
-        Recomendados...
+      <article id="recommended" class="active list indented scroll">
+        <ul>
+          <li data-image="images/metrovia.png" class="arrow">
+            <strong>Metrovía</strong>
+            <small>Rutas y Horarios</small>
+          </li>
+          <li data-image="images/partidos.png" class="arrow">
+            <strong>Campeonato Nacional</strong>
+            <small>Fechas y Resultados</small>
+          </li>
+          <li data-image="images/reciclaje.png" class="arrow">
+            <strong>Reciclaje</strong>
+            <small>Lugares y Tips</small>
+          </li>
+          <li data-image="images/pizza.png" class="arrow">
+            <strong>Pizzerías</strong>
+            <small>Descuentos y Recomendaciones</small>
+          </li>
+          <li data-image="images/mascotas.png" class="arrow">
+            <strong>Mascotas</strong>
+            <small>Clínicas y Hoteles</small>
+          </li>
+        </ul>
       </article>
       <article id="qr-reader">
         <div class="margined">Abriendo lector...</div>
@@ -73,5 +87,12 @@
         </ul>
       </article>
     </aside>
+    <script src="phonegap.js"></script>
+    <script src="barcodescanner.js"></script>
+    <script src="childbrowser.js"></script>
+    <script src="lib/quo.js"></script>
+    <script src="lib/lungo.js"></script>
+    <script src="lib/parse-1.2.1.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
