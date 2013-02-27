@@ -14,7 +14,7 @@ function onDeviceReady() {
         alert("qr");
         window.plugins.barcodeScanner.scan( function(result) {
             if (args.format == "QR_CODE") {
-                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
+                window.plugins.childBrowser.openExternal(args.text, usePhoneGap);
             }
         }, function(error) {
             alert("Ha ocurrido un error al leer el código: " + error);
