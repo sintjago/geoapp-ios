@@ -30,16 +30,16 @@
 
       <article id="search" class="active">
         <form class="margined" action="/" method="get">
-          <input type="search" placeholder="Qué buscas?"/>
-          <input type="search" placeholder="Dónde?"/>
-          <button id="search-button">Buscar</button>
+          <input id="what" type="search" placeholder="&iquest;Qu&eacute; buscas"/>
+          <input id="where" type="search" placeholder="&iquest;D&oacute;nde?"/>
+          <a href="#results" id="search-button" class="button big" data-icon="search" data-label="Buscar" data-router="section"></a>
         </form>
         <div class="ad margined">
           Publicidad: 2x1 todos los días en PizzaPizza Mall del Sol
         </div>
       </article>
 
-      <article id="favorites" class="active list indented scroll">
+      <article id="favorites" class="list indented scroll">
         <ul>
           <li class="arrow">
             <strong>Pizza Hut</strong>
@@ -56,7 +56,7 @@
         </ul>
       </article>
 
-      <article id="recommended" class="active list indented scroll">
+      <article id="recommended" class="list indented scroll">
         <ul>
           <li data-image="images/metrovia.png" class="arrow">
             <strong>Metrovía</strong>
@@ -85,11 +85,21 @@
         <div class="margined">Abriendo lector...</div>
       </article>
 
-      <article id="search-results" class="active list indented scroll">
-        <ul>
-          <li>
+    </section>
 
+    <section id="search-results">
+      <header data-title="Resultados">
+        <nav class="box">
+          <a href="#back" data-router="section" data-icon="left"></a>
+        </nav>
+      </header>
+
+      <article id="results-content" class="list scroll">
+        <ul class="results-list">
+          <li>
+            <strong>Buscando...</strong>
           </li>
+
         </ul>
       </article>
     </section>
