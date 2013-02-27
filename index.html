@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Ubikalo</title>
+    <link rel="stylesheet" href="styles/lungo.css">
+    <link rel="stylesheet" href="styles/theme.lungo.css">
+    <link rel="stylesheet" href="styles/lungo.icon.css">
+    <link rel="stylesheet" href="styles/lungo.icon.brand.css">
+    <link rel="stylesheet" href="styles/claro.css">
+  </head>
+  <body class="app">
+
+    <section id="main" data-transition="">
+      <header data-title="Búsqueda">
+        <nav>
+          <a href="#features" data-router="aside" data-icon="menu"></a>
+        </nav>
+      </header>
+      <article id="search" class="active">
+        <form class="margined" action="/" method="get">
+          <fieldset data-icon="search">
+            <input type="search" placeholder="Qué buscas"/>
+          </fieldset>
+        </form>
+        <div class="ad margined">
+          Publicidad: 2x1 todos los días en PizzaPizza Mall del Sol
+        </div>
+      </article>
+      <article id="favorites">
+        Favoritos...
+      </article>
+      <article id="recommended">
+        Recomendados...
+      </article>
+      <article id="qr-reader">
+        QR reader...
+      </article>
+    </section>
+
+    <aside id="features">
+      <header data-title="Menú"></header>
+      <article class="list scroll active">
+        <ul>
+          <li class="active">
+            <a href="#search" data-router="article" data-title="Búsquedas">
+              <strong>Búsquedas</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#favorites" data-router="article" data-title="Favoritos">
+              <strong>Favoritos</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#recommended" data-router="article" data-title="recomendados">
+              <strong>Recomendados</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#qr-reader" data-router="article" data-title="Lector QR">
+              <strong>Lector QR</strong>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </aside>
+    <script src="lib/quo.js"></script>
+    <script src="lib/lungo.js"></script>
+    <script>
+      Lungo.init({
+        name: "Claro App"
+      });
+    </script>
+  </body>
+</html>
