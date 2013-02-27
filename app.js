@@ -10,8 +10,7 @@ function onDeviceReady() {
         name: "Claro App"
     });
 
-    Lungo.dom('#qr-reader').on('load', function(event){
-        alert("qr");
+    Lungo.dom('#qr-reader').on('load', function(event) {
         window.plugins.barcodeScanner.scan( function(result) {
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });

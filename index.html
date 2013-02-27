@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -8,7 +9,8 @@
     <link rel="stylesheet" href="styles/theme.lungo.css">
     <link rel="stylesheet" href="styles/lungo.icon.css">
     <link rel="stylesheet" href="styles/lungo.icon.brand.css">
-    <link rel="stylesheet" href="styles/claro.css">    <script src="phonegap.js"></script>
+    <link rel="stylesheet" href="styles/claro.css">
+    <script src="phonegap.js"></script>
     <script src="barcodescanner.js"></script>
     <script src="childbrowser.js"></script>
     <script src="lib/quo.js"></script>
@@ -16,6 +18,7 @@
     <script src="lib/parse-1.2.1.min.js"></script>
     <script src="app.js"></script>
   </head>
+
   <body class="app" onload="onLoad()">
 
     <section id="main" data-transition="">
@@ -24,6 +27,7 @@
           <a href="#features" data-router="aside" data-icon="menu"></a>
         </nav>
       </header>
+
       <article id="search" class="active">
         <form class="margined" action="/" method="get">
           <input type="search" placeholder="Qué buscas?"/>
@@ -34,9 +38,24 @@
           Publicidad: 2x1 todos los días en PizzaPizza Mall del Sol
         </div>
       </article>
+
       <article id="favorites">
-        Favoritos...
+        <ul>
+          <li class="arrow">
+            <strong>Pizza Hut</strong>
+            <small>042778822</small>
+          </li>
+          <li>
+            <strong>Fastline</strong>
+            <small>042823333</small>
+          </li>
+          <li>
+            <strong>Pharmacys</strong>
+            <small>1800229922</small>
+          </li>
+        </ul>
       </article>
+
       <article id="recommended" class="active list indented scroll">
         <ul>
           <li data-image="images/metrovia.png" class="arrow">
@@ -61,9 +80,11 @@
           </li>
         </ul>
       </article>
+
       <article id="qr-reader">
         <div class="margined">Abriendo lector...</div>
       </article>
+
     </section>
 
     <aside id="features">
@@ -93,5 +114,6 @@
         </ul>
       </article>
     </aside>
+
   </body>
 </html>
