@@ -4,6 +4,9 @@ function onLoad() {
 }
 
 function onDeviceReady() {
+    Lungo.init({
+        name: "Claro App"
+    });
     Lungo.dom('#qr-reader').on('load', function(event){
         alert("qr");
         window.plugins.barcodeScanner.scan( function(result) {

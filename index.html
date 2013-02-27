@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="styles/lungo.icon.css">
     <link rel="stylesheet" href="styles/lungo.icon.brand.css">
     <link rel="stylesheet" href="styles/claro.css">
+    <script src="phonegap.js"></script>
+    <script src="barcodescanner.js"></script>
+    <script src="lib/quo.js"></script>
+    <script src="lib/lungo.js"></script>
+    <script src="lib/parse-1.2.1.min.js"></script>
+    <script src="app.js"></script>
   </head>
-  <body class="app">
+  <body class="app" onload="onLoad()">
 
     <section id="main" data-transition="">
       <header data-title="Búsqueda">
@@ -66,15 +72,5 @@
         </ul>
       </article>
     </aside>
-    <script src="phonegap.js"></script>
-    <script src="barcodescanner.js"></script>
-    <script src="lib/quo.js"></script>
-    <script src="lib/lungo.js"></script>
-    <script>
-      Lungo.init({
-        name: "Claro App"
-      });
-    </script>
-    <script src="app.js"></script>
   </body>
 </html>
