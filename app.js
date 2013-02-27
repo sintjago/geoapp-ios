@@ -4,18 +4,20 @@ function onLoad() {
 }
 
 function onDeviceReady() {
+    Parse.initialize("kup71jplyebmqgJNHtEOmSLCad7Gox2PNHPageo8", "15cHc7mGqxhotI3AApuqUqQD9CaM1ZAuRfaHgNCF");
+
     Lungo.init({
         name: "Claro App"
     });
+
     Lungo.dom('#qr-reader').on('load', function(event){
         alert("qr");
         window.plugins.barcodeScanner.scan( function(result) {
-            alert("We got a barcode\n" +
-              "Result: " + result.text + "\n" +
-              "Format: " + result.format + "\n" +
-                  "Cancelled: " + result.cancelled);
+            if (args.format == "QR_CODE") {
+                window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
+            }
         }, function(error) {
-            alert("Scanning failed: " + error);
+            alert("Ha ocurrido un error al leer el código: " + error);
         });
     });
 }
